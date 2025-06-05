@@ -1,0 +1,16 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --grayScale100: #f7f7f7;
+  --grayScale200: #dbdadc;
+  --grayScale300: #c3c3c3;
+  --grayScale400: #b4b4b4;
+  --grayScale500: #a1a1aa;
+  --grayScale600: #8c8c8c;
+  --greenScale100: #e7fff7;
+  --greenScale200: #00c6af;
+  --greenScale300: #0ecc7e;
+  --greenScale400: #25c56d;
+  --greenScale500: #00b168;
+  --greenScale600: #009658;
+}
