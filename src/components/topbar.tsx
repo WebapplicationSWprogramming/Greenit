@@ -27,6 +27,7 @@ const TopbarStyle = styled.div`
   top: 0;
   left: 0;
   background-color: ${({ theme }) => theme.color.white};
+  z-index: 10;
 `;
 
 const Img = styled.img`
