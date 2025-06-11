@@ -1,7 +1,7 @@
 const fontGenerator = (weight: number, size: number) =>
   `
         font-weight: ${weight};
-        font-size: ${size}ㄴpx;
+        font-size: ${size}px;
     `;
 
 /**
