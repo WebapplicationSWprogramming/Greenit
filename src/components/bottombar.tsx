@@ -1,43 +1,48 @@
 import styled from "styled-components";
 import { Diary, Home, Leaf, User } from "../assets";
 import { Tab } from "./tab";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const BottomBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const tab = [
     {
-      icon: Home,
+      icon: <Home fill={location.pathname === "/" ? "#25C56D" : "#A1A1AA"} />,
       title: "홈",
-      isActive: true,
       to: "/",
     },
     {
-      icon: Leaf,
+      icon: (
+        <Leaf
+          fill={location.pathname === "/challenge" ? "#25C56D" : "#A1A1AA"}
+        />
+      ),
       title: "챌린지",
-      isActive: false,
       to: "/challenge",
     },
     {
-      icon: Diary,
+      icon: (
+        <Diary fill={location.pathname === "/diary" ? "#25C56D" : "#A1A1AA"} />
+      ),
       title: "다이어리",
-      isActive: false,
       to: "/diary",
     },
     {
-      icon: User,
+      icon: <User fill={location.pathname === "/my" ? "#25C56D" : "#A1A1AA"} />,
       title: "마이",
-      isActive: false,
       to: "/my",
     },
   ];
+
   return (
     <BottomBarContainer>
       {tab.map((item) => (
         <Tab
           key={item.title}
           title={item.title}
-          isActive={item.isActive}
+          isActive={location.pathname === item.to}
           icon={item.icon}
           onClick={() => navigate(item.to)}
         />

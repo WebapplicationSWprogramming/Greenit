@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface TabProps {
   title: string;
-  icon?: string;
+  icon?: React.ReactNode;
   onClick?: () => void;
   isActive?: boolean;
 }
@@ -10,7 +10,7 @@ interface TabProps {
 export const Tab = ({ title, icon, onClick, isActive }: TabProps) => {
   return (
     <Container $isActive={isActive} onClick={onClick}>
-      <img src={icon} alt={`${title}icon`} />
+      {icon}
       <Title>{title}</Title>
     </Container>
   );
